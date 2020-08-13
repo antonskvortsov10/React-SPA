@@ -9,7 +9,7 @@ function _applyMiddleware() {
 }
 
 export default function configureStore(initialState) {
-    const store = compose(_applyMiddleware)(createStore)(rootReducer, initialState);
+    const store = compose(_applyMiddleware())(createStore)(rootReducer, initialState);
 
     return store;
 }
